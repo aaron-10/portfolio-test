@@ -455,6 +455,7 @@ table {
 
 .row>.col-4 {
     width: 33.33333%;
+    display:flex;
 }
 
 .row>.off-4 {
@@ -1740,6 +1741,7 @@ table thead {
 .image {
     display: inline-block;
     outline: 0;
+    min-width: 180px;
 }
 
 .image img {
