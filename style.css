@@ -39,19 +39,22 @@ body {
 
 .back-button {
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 10px;
+    top: 0px;
     text-decoration: none;
     font-size: 1rem;
     color: rgb(68, 68, 68);
     font-weight: 300;
 }
 
-/* Title for both pages */
 .banner h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
     font-weight: 800;
+}
+
+#name{
+    font-size: 2.5rem;
 }
 
 /* Year Indication on Project Page */
@@ -68,6 +71,8 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     padding-top: 20px;
+
+    
 }
 
 /* Portfolio Grid (Index Page) */
@@ -98,6 +103,9 @@ body {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 15px;
+
+    object-fit: cover;
+    height: 250px; /* Ensures images are cropped to the same height */
 }
 
 .item h3 {
@@ -137,6 +145,14 @@ body {
 .project-content .text {
     flex: 1 1 50%;
     font-weight: 300;
+    
+}
+
+.project-content .text.left{
+    order: 1
+}
+.project-content .text.right{
+    order: 2
 }
 
 .project-content .image {
@@ -145,13 +161,22 @@ body {
 
 .project-content img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: contain; 
+    order: 2;
+}
+
+.project-content .left {
+    order: 1
+}
+.project-content .right {
+    order: 2
 }
 
 /* Responsive */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
     .project-content {
         flex-direction: column;
     }
@@ -164,6 +189,13 @@ body {
         max-width: 100%;
     }
 
+    .project-content .left{
+        order:3;
+    }
+    .project-content .right{
+        order:3;
+    }
+
     .portfolio-grid {
         flex-direction: column;
         gap: 15px;
@@ -172,4 +204,5 @@ body {
     .item {
         flex: 1 1 100%;
     }
+
 }
