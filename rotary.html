@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rotary subwoofer</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>3D printed rotary subwoofer</h1>
+            <div class="year">2021 - Present</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Overview</h2>
+                <p>
+                    A rotary subwoofer is a fascinating type of subwoofer: it is a fan that can change the
+                    pitch of the blades very quickly. By switching the direction of airflow back and forth
+                    very quickly it can generate sound waves.
+                    I've always wanted to build one just to hear what such deep bass sounds like, so I built
+                    one while taking a course on Acoustics. For this course I also worked on simulations in COMSOL,
+                    but it turns out to be quite tricky to simulate.
+                </p>
+                <br><br>
+            </div>
+
+        </div>
+
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Background</h2>
+                <p>
+                    A traditional speaker setup consists of speakers for the higher frequency range and
+                    a subwoofer
+                    for the lower frequency range. The higher frequency range is covered quite well by
+                    the
+                    midrange speakers and tweeters. However, the lower frequency range is not fully
+                    covered by
+                    a traditional subwoofer. The response of most subwoofers already rolls off above
+                    20Hz, and
+                    most subwoofers certainly do not cover the infrasonic range (f < 20Hz). </p>
+                        <br>
+                        <p>
+                            A rotary subwoofer can solve this gap in frequency response. It can generate
+                            very low
+                            frequencies and can even go down to 0Hz, which is no useful sound but is
+                            just constant
+                            displacement of air. Whereas the limitation of traditional conus-based
+                            subwoofers is a lower
+                            frequency limit, the limiting factor for a rotary subwoofer is actually an
+                            upper frequency limit.
+
+                        </p>
+                        <br>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="project-content">
+            <div class="text right">
+                <h2>Design</h2>
+                <p>
+                    The modulation mechanism consists of two discs that can move with respect to each
+                    other. The blades are connected to one of the discs via some tiny bearings.
+
+                    The other disc is connected to the blades via small rods that push and pull the
+                    blades. The voice coil moves this second disc, and thus changes the pitch of the
+                    blades.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/subwoofer/Render.png" width="600px">
+            </div>
+
+        </div>
+
+        <div class="project-content">
+            <div class="text right">
+                <h2>Building</h2>
+                <p> I used an old fan motor to make the
+                    subwoofer rotate, and to module the blade pitch I used the voice coil of an old
+                    subwoofer. All the black parts are 3D printed and the blades were laser cut from some thin
+                    plywood.
+
+
+                </p>
+
+
+            </div>
+
+            <div class="image left">
+                <img src="images/subwoofer/woofer3.jpg">
+            </div>
+
+        </div>
+
+
+        <div class="project-content">
+            <div class="text left">
+                <h2>Testing</h2>
+                <p> The subwoofer can be placed in the opening of a window with
+                    plywood around it to make it as airtight as possible. This turns the entire house
+                    into the enclosure.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/subwoofer/window.png">
+            </div>
+
+        </div>
+
+        
+        <div class="project-content">
+            <div class="text right">
+                <p> In the end it worked pretty well. It can even play some music. It got up to a maximum frequency
+                    of around 32Hz, but it really struggles at such high frequencies.
+
+                </p>
+                <br>
+                <p>
+                    
+                    The sound of the really deep bass is quite unsettling. The frequencies lower than 20Hz are not really audible of course,
+                    but you still 'sense' the sound for frequencies slightly lower than 20Hz. Much lower than 20Hz is
+                    not detectable. The microphone of my phone could pic it up down to around 12Hz, below which it also
+                    stopped detecting the sound.
+
+                </p> 
+
+            </div>
+
+            <div class="image left">
+                <img src="images/subwoofer/20hz.png">
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

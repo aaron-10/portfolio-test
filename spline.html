@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Title</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>Rollercoaster track automation</h1>
+            <div class="year">2023</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Simple track sections</h2>
+                <p> In order to do some testing for my model roller coaster I need some simple rail sections. For this,
+                    I
+                    need to be able to get the splines of the rails and spine with control over the banking.
+                    This would be possible with something like NoLimits 2, but it requires the pro version
+                    which is quite expensive for some simple tests. So I decided to write a Python script that takes in
+                    a spline and banking information
+                    very easily from Blender and converts it to the required rail and spine splines. This can then be
+                    imported into Fusion 360 for actually making the 3D model. In the future when I want to actually
+                    design a whole coaster, this script can be replaced by NoLimits 2.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <p> It starts with a cubic Bezier spline in blender.</p>
+            </div>
+
+            <div class="image right">
+                <img src="images/coasterspline/blenderspline.png" width="600px">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <p>A Blender Python script automatically exports all its control points and tilts. This exported data is
+                    then processed by the main script that generates the remaning splines.
+                    It interpolates the Bezier spline with an algorithm that solves for equidistant points on the
+                    spline. It finds the normals and binormals to the spline at these points and applies the correct
+                    banking based on the input. Using these vectors, the points that describe the rail and spine splines
+                    are easy to find. The result is as follows:</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/coasterspline/python.png" width="600px">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <p>These splines can be imported into Fusion 360.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/coasterspline/fusionspline.png" width="600px">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <h2>Fusion automation</h2>
+
+                <p>Now the splines can be generated, but they still need to be converted to an actual 3D model.
+                    Sweeping the rails and spine over the spines is easy, but the crossties are a very tedious
+                    to add by hand. Especially once I scale it up to designing a whole coaster with output splines from NoLimits 2 
+                    at some point in the future. There needs to be a cutout for the crossties at set intervals along the curve
+                    (at each control point). This is realized by copying a sketch with the desired cutout profile
+                    to a plane that intersects each set of three control points on the curve.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <p>Finally, the splines can be converted to a 3D model. The supports are still modelled by hand,
+                    as they are a bit more involved than simply copying a cutout along a curve.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/coasterspline/deskraills.png" width="600px">
+            </div>
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="project-container">
+        <div class="project-content">
+            <div class="text left">
+                <p>The 3D printed result turned out quite nicely.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/coasterspline/3dprint.png" width="600px">
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

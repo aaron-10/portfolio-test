@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Title</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>Model roller coaster</h1>
+            <div class="year">2021 - Present</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Overview</h2>
+                <p>
+                    I've been wanting to build a model roller coaster for a long time. There is a lot possible with a
+                    rather cheap 3D printed (Ender 3) with some small nozzles. At the moment I'm experimenting 
+                    with different track, bogie and cart designs, inspired by amazing projects such as the model coasters by <a
+                        href="https://www.instagram.com/3d_coasters/">Dan Fritsche</a>.
+                    One day I want to build an entire model coaster, but I am trying to get step by step, by first
+                    getting all the seperate parts working. At the moment I can already create 3D printed track, but I'm working on
+                    <a href="spline.html">automating track generation</a> to make it more feasible to model
+                    larger amounts of track.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="project-content">
+            <div class="text left">
+                <p> The wheel bogies have two main wheels, two side wheels and one upstop wheel, all 
+                    containing a tiny 3mm OD bearing.
+                    
+                    It took quite some iterations to properly finetune the designs of all the tiny parts that need to 
+                    fit together perfectly and still move freely.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/modelcoaster/bogiecad.png">
+            </div>
+
+        </div>
+
+        
+        <div class="project-content">
+            <div class="text right">
+                <p> The wheels can be 3D printed slowly using a 0.2mm nozzle. The outer surface
+                    is nowhere near smooth enough, so by connecting the wheels to the axis of a Dremel,
+                    the surface is smoothed using very fine grit sandpaper.
+                </p>
+                <br>
+                <p> The remaining parts are also printed with 0.2mm and 0.3mm nozzles, and are design to
+                    be press fitted together, only needing a tiny drop of superglue to stay together. The axles
+                    are simply made from 1mm steel wire and they are also superglued in place.
+                </p>
+
+            </div>
+
+            <div class="image left">
+                <img src="images/modelcoaster/bogie.png">
+            </div>
+
+        </div>
+
+
+
+        <div class="project-content">
+            <div class="text left">
+                <p>The bogies connect to the carts via a 3mm bolt though a 5mm OD bearing, such 
+                    that they can yaw freely. The plan is to connect the carts into a train using 
+                universal couplings.</p>
+
+            </div>
+
+            <div class="image right">
+                <img src="images/modelcoaster/traincad.png" width="600px">
+            </div>
+
+        </div>
+
+        <div class="project-content">
+            <div class="text right">
+                <p>So far I have only actually built the front cart. The front and back of the cart can 
+                    rotate with respect to eachother thanks to a small bearing, which allows the required degree of freedom 
+                    for the carts to follow the track. It runs really smoothly on the track, even sideways, upside down and on 
+                    a banked track section. The next steps are to realize the rest of the train, and creating more track sections 
+                    for testing.
+                </p>
+
+            </div>
+
+            <div class="image left">
+                <img src="images/modelcoaster/PXL_20240917_095902499.MP.jpg" width="600px">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
